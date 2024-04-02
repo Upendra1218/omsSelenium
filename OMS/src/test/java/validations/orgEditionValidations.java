@@ -1,0 +1,54 @@
+package validations;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import baseClass.baseClass;
+import functionality.Actionsss;
+import functionality.Waits;
+import pageObjects.crmXpaths;
+
+public class orgEditionValidations extends baseClass{
+
+
+	public static void VerifyCompanypagelayout() {
+		 test.info("Verify wheather the user is able to login with valid credentials"); 
+		Wait<WebDriver> wait = Waits.createFluentWait(driver);
+		// Call the waitForElementVisibility method and pass the locator 
+		WebElement mainDivCompanyInfoElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Company Information']")));
+		// Check if the element is displayed
+		if (Actionsss.displayElement(mainDivCompanyInfoElement)) {
+		    logger.info("Succesfully User is Searched the company info and clicked and Navigated to the Company Information page");
+		    test.pass("Succesfully User is Searched the company info and clicked and Navigated to the Company Information page");
+		} else {
+		    logger.info("Element is not visible.");
+		}
+	 }
+	
+	
+	public static void VerifyorgValidation() {
+		test.info("Verify wheather the user is able to login with valid credentials of Developer edition"); 
+		Actionsss.SwitchingToIFrame();
+		Wait<WebDriver> wait = Waits.createFluentWait(driver);
+		// Call the waitForElementVisibility method and pass the locator 
+		WebElement orgEdition = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[text()='Developer Edition']")));
+		String actualAddToCart = orgEdition.getText();
+       // Expected alert text
+       String expectedAddToCart = "Developer Edition";
+       // Check if the actual alert text matches the expected text
+       if (actualAddToCart.equals(expectedAddToCart)) {
+           // Success message is displayed
+       	   test.pass("Successfully Navigated to the company Information page, org edition is Developer Edition");
+           logger.info("Successfully Navigated to the company Information page, org edition is Developer Edition");
+           // Perform actions or assertions here for the success case
+       } else {
+    	   logger.info("Element is not visible.");
+       }
+       Actionsss.SwitchingToDefault();
+	 }
+	
+}

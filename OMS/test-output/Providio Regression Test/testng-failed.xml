@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Providio Regression Test]">
+  <test thread-count="5" name="Regression Testing(failed)">
+    <classes>
+      <class name="browser.launchBrowsering">
+        <methods>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- browser.launchBrowsering -->
+      <class name="testScripts.PaymentPageTests">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="VerifyingRegUserSelectExistingBillingAddressFromPaymentPage"/>
+          <include name="afterClass"/>
+          <include name="VerifyingRegUserSelectExistingShippingAddressFromPaymentPagePlaceOrder"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testScripts.PaymentPageTests -->
+    </classes>
+  </test> <!-- Regression Testing(failed) -->
+</suite> <!-- Failed suite [Providio Regression Test] -->

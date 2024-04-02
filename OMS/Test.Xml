@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Providio Smoke Test">
+
+	 <test name="SmokeTest">
+	
+        <classes>
+			<class name ="browser.launchingforCCBrowser"/> 
+            <class name ="testScripts.loginToCC"/> 
+            <class name ="testScripts.loginPageTest"/> 
+		 	   <methods>
+		         <include name="VerifyingLoginWithValidCredentials" />								 
+               </methods> 
+	        <class name ="testScripts.CheckTheOrgEditionTests"/> 
+			   <methods>
+			 	  <include name="VerifyingCompanyInfoSearchAndOrgEdition" />								 
+	           </methods> 
+	         <class name ="testScripts.CheckCurrencySettoUSDTest"/> 
+			 	<methods>
+			 	  <include name="VerifyingCurrencyisSetToUsd" />								 
+	           </methods> 
+	          <class name ="testScripts.OrderSettingsTests"/> 
+			 	<methods>
+			 	  <include name="VerifyingOrderSettingPagefromSideMenu" />								 
+	           </methods> 
+		      <class name ="testScripts.EnablePersonAccountTest"/> 
+			 	<methods>
+			 	  <include name="VerifyingEnablePersonAccountsfromSideMenu" />								 
+	           </methods>
+	          <class name ="testScripts.OrderManagementTest"/> 
+			 	<methods>
+			 	  <include name="VerifyingOrderManagementPagefromSideMenu" />								 
+	           </methods>
+	         <class name ="testScripts.OmniChannelInventryTest"/> 
+			 	<methods>
+			 	  <include name="VerifyingEnableOmniChannelInverntryfromSideMenu" />								 
+	           </methods> 
+	           
+	          <class name ="testScripts.ConnectWithB2CTest"/> 
+			 	<methods>
+			 	  <include name="VerifyingConnectWithB2CfromSideMenu" />								 
+	           </methods>
+	         <class name ="testScripts.enablePathSettingsTest"/> 
+			 	<methods>
+			 	  <include name="VerifyingEnablepathSettingsfromSideMenu" />								 
+	           </methods>
+	         <class name ="testScripts.deploymentTest"/> 
+			 	<methods>
+			 	  <include name="VerifyingInstallpackageURL" />								 
+	           </methods>
+	         <class name ="testScripts.ProdcutFamilyPicklistValuesTest"/> 
+			 	<methods>
+			 	  <include name="VerifyingAddReqPickListValuesToProductFamilyAfterpostDeployment" />								 
+	           </methods>
+	         <class name ="testScripts.OrderStatusPicklistAddTest"/> 
+			 	<methods>
+			 	  <include name="VerifyingAddReqPickListValuesToorderStatusAfterpostDeployment" />								 
+	           </methods>
+	          <class name ="testScripts.orderSummeryStatusPicklistAddTest"/> 
+			 	<methods>
+			 	  <include name="VerifyingAddReqPickListValuesToOrderSummeryAfterpostDeployment" />								 
+	           </methods>
+	           
+	           <class name ="testScripts.checkOrderSummerieswithStoreFront"/> 
+			 	<methods>
+			 	  <include name="VerifyingOrderSummeriesWithStoreFornt" />								 
+	           </methods>
+	          
+     </classes>
+    </test>
+</suite>
+
